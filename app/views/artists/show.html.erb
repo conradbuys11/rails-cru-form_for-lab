@@ -1,1 +1,10 @@
-<h1>Text</h1>
+<h1>The Artist Formerly Known as <%= @artist.name %></h1>
+
+<ul>
+<% @artist.songs.each do |song| %>
+    <li>Song: <%= link_to(song.name, song_path(song.genre)) %>, 
+    Genre: <%= link_to(song.genre.name, genre_path(song.genre)) %></li>
+<% end %>
+<br>
+<h3><%= link_to("Back to Index", artists_path) %></h3>
+</ul>

@@ -1,1 +1,8 @@
-<h1>Text</h1>
+<h1><%= @song.name %></h1>
+
+<ul>
+<li>Artist: <%= link_to(@song.artist.name, artist_path(@song.artist)) %></li>
+<li>Genre: <%= link_to(@song.genre.name, genre_path(@song.genre)) %></li>
+</ul>
+<br>
+<h3><%= link_to("Back to Index", songs_path) %></h3>
