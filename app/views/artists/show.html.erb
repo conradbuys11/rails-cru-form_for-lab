@@ -1,5 +1,6 @@
 <h1>The Artist Formerly Known as <%= @artist.name %></h1>
 
+<p><%= @artist.bio %></p>
 <ul>
 <% @artist.songs.each do |song| %>
     <li>Song: <%= link_to(song.name, song_path(song.genre)) %>, 
